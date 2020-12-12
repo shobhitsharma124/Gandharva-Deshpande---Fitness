@@ -1,0 +1,65 @@
+
+<form class="form-inline" [formGroup]="search" (ngSubmit)="onSearch()">
+  <input  type="search" placeholder="Enter M or F or N" aria-label="Search"  class="form-control" formControlName="value">
+  <button type="button" class="btn btn-primary btn-lg" type="submit" click="onSearch()">Search</button>
+</form>
+
+
+
+
+
+<table class="table table-bordered">
+    <thead class="black white-text">
+
+
+
+
+<tr>
+  <th>Sr. NO</th>
+          <th>{{x[0]}}</th>
+         
+          <th>{{x[4]}}</th>
+          <th>{{x[5]}}</th>
+          <th>{{x[6]}}</th>
+          <th>{{x[7]}}</th>
+          <th>{{x[8]}}</th>
+          <th>{{x[9]}}</th>
+          
+          <th>{{x[11]}}</th>
+
+</tr>
+      
+    </thead>
+    <tbody>
+      <tr mdbTableCol *ngFor="let el of filterapp; let i = index">
+          <td>{{i+1}}</td>
+
+        <td>{{el.phone}}</td>
+       
+        <td>{{el.city}}</td>
+        <td>{{el.trainerpreference}}</td>
+        <td>{{el.physiotherapist}}</td>
+        <td>{{el.packages}}</td>
+        <td>{{el.firstName}}</td> 
+        <td>{{el.lastName}}</td>
+       
+
+        
+        <td>{{el.age}}</td>
+
+
+      </tr>
+    </tbody>
+</table>
+    
+
+
+
+
+
+
+
+
+
+
+

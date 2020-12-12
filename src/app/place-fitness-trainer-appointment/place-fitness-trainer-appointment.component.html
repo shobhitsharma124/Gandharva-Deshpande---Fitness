@@ -1,0 +1,204 @@
+<div>
+    <div class="container">
+        
+            <div class="col-md-12 offset-md-3">
+                <h3>Buyer's Information</h3>
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label>First Name</label>
+                    <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                    <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                        <div *ngIf="f.firstName.errors.required">First Name is required</div>
+
+                        </div>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" formControlName="lastName" class="form-control"  >
+                      
+                    </div>
+
+<div class="form-group">
+                        <label>Email</label>
+                        <input type="text" formControlName="email" class="form-control"  >
+                       
+                    </div>
+
+
+
+                    <div class="form-group" >
+                        <label>Phone number</label>
+    <input type="number" formControlName="phone" class="form-control" >
+        
+   
+
+   
+
+</div>
+<div class="form-group" >
+    <label>Age</label>
+<input [min]=18 [max]=60 type="number" formControlName="age" class="form-control" >
+
+
+
+
+
+</div>
+                    
+                                    
+<div>
+    
+<h4>Shipping Address</h4>
+<div class="form-group">
+    <label>Street Addres</label>
+<input type="text" formControlName="streetaddress" class="form-control">
+
+
+
+    </div>
+<div class="form-group">
+
+
+    
+    <label>City</label>
+    <input type="text" formControlName="city" class="form-control">
+<span>
+        <label>State</label>
+        <input type="text" formControlName="state" class="form-control">
+    </span>
+</div>
+<div class="form-group">
+<label>Pin code </label>
+
+<input type="text" formControlName="pincode" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.pincode.errors }" />
+<div *ngIf="submitted && f.pincode.errors" class="invalid-feedback">
+    <div *ngIf="f.pincode.errors.required">Pincode is required</div>
+    <div *ngIf="f.pincode.errors.minlength">Pincode must be 6 characters</div>
+    <div *ngIf="f.pincode.errors.maxlength">Pincode must be 6 characters</div>
+</div>
+     
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="form-inline" >
+      
+        <h6>Trainer Preference</h6>
+<label>
+    <input type="radio" value="Female" name="trainerpreference" formControlName="trainerpreference" class="form-control">
+    Female
+  </label>
+  <label>
+    <input type="radio" value="Male" name="trainerpreference" formControlName="trainerpreference"class="form-control">     
+    Male
+  </label>
+
+  <label>
+    <input type="radio" value="No preference" name="trainerpreference" formControlName="trainerpreference"class="form-control">     
+    No preference
+  </label>
+
+</div>
+
+
+<div class="form-inline" >
+    <h6>Do you need a Physiotherapist : </h6>
+<label>
+<input type="radio" value="Yes" name="physiotherapist" formControlName="physiotherapist" class="form-control">
+Yes
+</label>
+<label>
+<input type="radio" value="No" name="physiotherapist" formControlName="physiotherapist"class="form-control">     
+No
+</label>
+</div>
+
+
+<div class >
+    <h6>Select a Package : </h6>
+
+    
+
+
+
+
+<div class="form-inline">
+
+<label>
+<input type="radio" value=500 name="packages" formControlName="packages" class="form-control" (click)="a()">
+One time assesment only Rs 500
+</label>
+<br>
+<label>
+<input type="radio" value=1600 name="packages" formControlName="packages"class="form-control" (click)="b()">     
+4 sessions per week (400Rs per session)
+</label>
+
+<br>
+<label>
+<input type="radio" value=1500 name="packages" formControlName="packages"class="form-control" (click)="c()">     
+5 sessions per week (300Rs per session)
+</label>
+
+<br>
+</div>
+<label>
+<input type="number" value="" name="packages" formControlName="packages"class="form-control">     
+Other
+</label>
+<br>
+
+
+
+
+</div>
+
+<label> Amount(Rs)</label>
+<textarea name="myText">
+    {{val}} 
+    </textarea>
+Paise    <span><textarea name="myText">
+        {{val1}}
+        </textarea></span>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+                    <div class="form-group">
+                        <button type="submit"  class="btn btn-primary">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+

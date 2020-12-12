@@ -1,0 +1,80 @@
+<div class="logo">
+  <nav class="navbar navbar-light blue lighten-4">
+    <span class="navbar-brand">
+      
+      
+      <H2>FITNESS APP</H2></span>
+  </nav>
+
+</div>
+
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+  <button type="button" class="btn btn-primary btn-lg" (click)="landingpage()">Home</button><br>
+  <button type="button" class="btn btn-primary btn-lg" (click)="placeAppointment()">Place Appointment</button><br>
+  <button type="button" class="btn btn-primary btn-lg" (click)="viewAppointment()">View Appointment</button><br>
+  <button type="button" class="btn btn-primary btn-lg" (click)="contactUspage()">Contact Us</button>
+  
+  
+ 
+
+
+</div>
+</nav>
+
+
+<div class="container-fluid bg-danger">
+
+
+  <div class="row">
+    <div class="col-4">
+    
+      <router-outlet></router-outlet>      
+    </div>
+    <div class="col-8">
+      
+    </div>
+
+
+  </div>
+
+
+</div>
+
+
+
+
+
+<div class="sidebar">
+  <div class="row">
+    <div class="col-2">
+      <div class="nav flex-column nav-pills"  aria-orientation="vertical">
+        <br>
+        <br>
+        <button class="btn btn-secondary" (click)="landingpage()">Home</button><br>
+        <button class="btn btn-secondary"(click)="placeAppointment()">Place Appointment</button><br>
+        <button class="btn btn-secondary"(click)="viewAppointment()">View Appointment</button><br>
+        <button class="btn btn-secondary"(click)="contactUspage()">Contact Us</button><br>
+        
+      </div>
+      
+    </div>
+<span>
+    <router-outlet></router-outlet>
+    </span>
+  </div>
+    <span>
+      <hr>
+    <button type="button" class="btn btn-primary btn-lg btn-block" (click)="landingpage()">Apply For Trainer</button> 
+       
+    
+      
+    
+    </span>
+  </div>
+ 
+
+
+
+
+
